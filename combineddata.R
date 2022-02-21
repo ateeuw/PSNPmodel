@@ -36,7 +36,10 @@ labour$household_id <- as.character(labour$household_id)
 data <- full_join(data, labour)
 
 # Assets
-# Not sure how to summarise, discuss!
+assetpath <- "C:/Users/TeeuwenAS/OneDrive - Universiteit Twente/Twente/Thesis shared - ABM value chains food security/Stylized model - clean/rscripts/abm_stylised/summary_data/assets.csv"
+asset <- read.csv(assetpath )
+asset$household_id <- as.character(asset$household_id)
+data <- full_join(data, asset)
 
 # Savings
 savingpath <- "C:/Users/TeeuwenAS/OneDrive - Universiteit Twente/Twente/Thesis shared - ABM value chains food security/Stylized model - clean/rscripts/abm_stylised/summary_data/savings.csv"
